@@ -5,21 +5,21 @@
 class Itunespull < Formula
   desc "Stream and download music from a remote Mac running iTunes or Apple Music over SSH"
   homepage "https://github.com/DrewThomasson/itunespull"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.0/itunespull_Darwin_x86_64.tar.gz"
-      sha256 "72e521c5a9f0bc261bc468acd061d01b84abeada4ff850c2e5c2456afd998ba1"
+      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.1/itunespull_Darwin_x86_64.tar.gz"
+      sha256 "c6f94e8112c0ae56af2ea1d9823ece8e2da4163a1979e4e8ad2105462d5ee5f6"
 
       define_method(:install) do
         bin.install "itunespull"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.0/itunespull_Darwin_arm64.tar.gz"
-      sha256 "e85200468ae76f4da0f6964801973723b40b192e02c9b4140ff0b46979088d9d"
+      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.1/itunespull_Darwin_arm64.tar.gz"
+      sha256 "418eb600b50160d06d33890a8e2628140723e21d5c3f5429b174fb8fe877662c"
 
       define_method(:install) do
         bin.install "itunespull"
@@ -29,15 +29,15 @@ class Itunespull < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.0/itunespull_Linux_x86_64.tar.gz"
-      sha256 "4d6d78c5e9a9c23d6dab0db18dd8731f1a1bd20cd9006e6b30fc19a649e1238b"
+      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.1/itunespull_Linux_x86_64.tar.gz"
+      sha256 "570e1a7736945e38e502d04e096d9df2596ca12e975d1480c4024b3eaba82e54"
       define_method(:install) do
         bin.install "itunespull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.0/itunespull_Linux_arm64.tar.gz"
-      sha256 "2b90c5fe610503b1a81edc8a38987caeef5ed375eabd81945be6355b7debfea1"
+      url "https://github.com/DrewThomasson/itunespull/releases/download/v1.0.1/itunespull_Linux_arm64.tar.gz"
+      sha256 "d1963d3e55cfa9b72708c88bbac291b8ae80f22cda69f93e4afef05ba7dc6658"
       define_method(:install) do
         bin.install "itunespull"
       end
